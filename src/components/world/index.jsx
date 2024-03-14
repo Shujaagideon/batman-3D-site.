@@ -6,11 +6,14 @@ import React from 'react'
 import { Scroll, ScrollControls, useScroll } from "@react-three/drei";
 import { val } from "@theatre/core";
 import { Batman } from "./Batman";
+import state from './site.json';
 
 
 const World = ({project}) => {
     
-    const sheet = project.sheet('world');
+    const sheet = project.sheet('world',{
+        state
+    });
 
 
     return (
