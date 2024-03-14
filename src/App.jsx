@@ -8,6 +8,7 @@ import { BlendFunction } from 'postprocessing'
 
 import studio from '@theatre/studio';
 import { getProject } from "@theatre/core";
+import state from './site.json';
 
 import World from '@/components/world'
 
@@ -16,7 +17,9 @@ if (import.meta.env.DEV) {
 }
 
 function App() {
-  const project = getProject("New Game");
+  const project = getProject("New Game",{
+    state
+});
 
   return (
     <>
