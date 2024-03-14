@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 import './App.css'
 
 import { Canvas } from '@react-three/fiber'
-import { Sparkles, Environment } from '@react-three/drei'
+import { Sparkles, Environment, Loader } from '@react-three/drei'
 import { EffectComposer, Noise } from '@react-three/postprocessing'
 import { BlendFunction } from 'postprocessing'
 
@@ -42,6 +42,7 @@ function App() {
           </div>
           
         </div>
+        <Loader />
         <Canvas>
           <World project={project}/>
           <Sparkles count={50} size={15} speed={0.3} opacity={0.1} scale={15} color="#545454"
